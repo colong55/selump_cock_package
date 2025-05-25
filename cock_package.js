@@ -5,7 +5,7 @@ function extractData(str) {
     const pid_url = "https://www.pixiv.net/artworks/";
 
     // Prioritize URLs
-    const urlRegex = /(https?://[^\s]+)/g;
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
     const urlMatch = str.match(urlRegex);
     if (urlMatch) {
         return urlMatch[0];
@@ -19,7 +19,7 @@ function extractData(str) {
     }
 
     // 6 or 5 numbers
-    const rule2Regex = /(?<!\d)\d{5,6}(?!\d)/;
+    const rule2Regex = /(?<!\d)\d{6}(?!\d)/;
     const rule2Match = str.match(rule2Regex);
     if (rule2Match) {
         return (r2_url + rule2Match[0]);
@@ -43,3 +43,11 @@ function extractData(str) {
     return 'https://e-hentai.org/?f_search='+str;
 }
 output = extractData(input)
+    
+
+
+
+
+
+
+    
